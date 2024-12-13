@@ -1,0 +1,10 @@
+@mixin theme(
+  $theme: red,
+  $image-path: "../images/icon-work.svg",
+  $background-position: 95% -10%
+) {
+  background: $theme;
+  background-image: url(#{$image-path});
+  background-repeat: no-repeat;
+  background-position: $background-position;
+}

@@ -1,0 +1,70 @@
+@use "colors";
+
+.first-section {
+  .person-name {
+    p {
+      color: colors.$Pale-Blue;
+      font-size: 0.94rem;
+      font-weight: colors.$font-weight-regular;
+      line-height: 1.1;
+    }
+
+    h3 {
+      color: white;
+      font-size: 1.5rem;
+      font-weight: colors.$font-weight-light;
+      line-height: 1.4;
+    }
+  }
+
+  .flex-work {
+    color: colors.$Pale-Blue;
+    font-size: 1.13rem;
+    font-weight: colors.$font-weight-regular;
+    line-height: 1.3;
+  }
+}
+
+/*.second-section {*/
+.top-flex {
+  .description {
+    color: rgb(255, 255, 255);
+    font-size: 1.13rem;
+    font-weight: colors.$font-weight-medium;
+
+    line-height: 1.3;
+  }
+}
+.bottom-flex {
+  .work-hours {
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    font-weight: colors.$font-weight-light;
+    line-height: 1.5;
+  }
+  .previous-work-hours {
+    color: colors.$Pale-Blue;
+    font-size: 0.94rem;
+    font-weight: colors.$font-weight-regular;
+    line-height: 1.5;
+  }
+}
+/*}*/
+
+@media screen and (min-width: 700px) {
+  .first-section {
+    .person-name {
+      h3 {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  .container {
+    .bottom-flex {
+      .work-hours {
+        font-size: 3.5rem;
+      }
+    }
+  }
+}

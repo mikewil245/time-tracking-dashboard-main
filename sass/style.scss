@@ -1,0 +1,158 @@
+@use "font";
+@use "colors";
+@use "typography";
+@use "mixins";
+
+body {
+  font-family: "rubik", sans-serif;
+  background: #0e1323;
+}
+
+.container {
+  max-width: 1200px;
+  display: grid;
+  gap: 1.5rem;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  min-height: 100vh;
+}
+
+.first-section {
+  background-color: colors.$Dark-blue;
+  border-radius: 0.94rem;
+  .about-person {
+    padding: 2.188rem 2.438rem 2.125rem 2rem;
+    border-radius: 0.94rem;
+    background-color: colors.$Blue;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .img-container img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid white;
+  }
+
+  .flex-work {
+    padding: 1.563rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  #daily:hover,
+  #weekly:hover,
+  #monthly:hover {
+    color: white;
+    cursor: pointer;
+  }
+}
+
+/*.second-section {*/
+/*display: grid;
+  gap: 1.5rem;*/
+.time-tracking-container {
+  border-radius: 0.94rem;
+  padding-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.work {
+  @include mixins.theme(colors.$Ligh-red-work, "../images/icon-work.svg");
+}
+
+.play {
+  @include mixins.theme(colors.$Soft-blue-play, "../images/icon-play.svg");
+}
+
+.study {
+  @include mixins.theme(colors.$Light-red-study, "../images/icon-study.svg");
+}
+
+.exercise {
+  @include mixins.theme(
+    colors.$Lime-green-exercise,
+    "../images/icon-exercise.svg",
+    95% 0%
+  );
+}
+
+.social {
+  @include mixins.theme(
+    colors.$Violet-social,
+    "../images/icon-social.svg",
+    95% -21%
+  );
+}
+
+.self-care {
+  @include mixins.theme(
+    colors.$Soft-orange-self-care,
+    "../images/icon-self-care.svg",
+    95% -10%
+  );
+}
+.content {
+  /*width: 20rem;*/
+  /*height: 7.563rem;*/
+  background-color: colors.$Dark-blue;
+  padding: 1.75rem 1.5rem;
+  border-radius: 0.94rem;
+}
+
+.top-flex,
+.bottom-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/*}*/
+
+@media screen and (min-width: 700px) {
+  .container {
+    margin: 0 auto;
+    place-content: center;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .first-section {
+    display: grid;
+    grid-column: 1 / 2;
+    grid-row: 1 / span 2;
+    .about-person {
+      /*margin-bottom: 1.2rem;*/
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    .flex-work {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+  }
+
+  .time-tracking-container .work {
+  }
+
+  .bottom-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 780px) {
+  .container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
