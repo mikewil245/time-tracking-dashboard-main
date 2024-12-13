@@ -10,7 +10,7 @@ function apiFetch() {
     })
     .then((data) => {
       timeTrackData = data;
-      // UI updates with the fetched data.
+
       updateTimeTrackUI("daily"); // Default to daily on load
     });
 }

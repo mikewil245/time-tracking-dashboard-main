@@ -94,11 +94,8 @@ body {
   max-width: 1200px;
   display: grid;
   gap: 1.5rem;
-  padding-left: 20px;
-  padding-right: 20px;
   margin-top: 50px;
   margin-bottom: 50px;
-  min-height: 100vh;
 }
 
 .first-section {
@@ -132,9 +129,6 @@ body {
   cursor: pointer;
 }
 
-/*.second-section {*/
-/*display: grid;
-  gap: 1.5rem;*/
 .time-tracking-container {
   border-radius: 0.94rem;
   padding-top: 2.5rem;
@@ -186,8 +180,6 @@ body {
 }
 
 .content {
-  /*width: 20rem;*/
-  /*height: 7.563rem;*/
   background-color: hsl(235, 46%, 20%);
   padding: 1.75rem 1.5rem;
   border-radius: 0.94rem;
@@ -200,12 +192,20 @@ body {
   justify-content: space-between;
 }
 
-/*}*/
 @media screen and (min-width: 700px) {
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   .container {
     margin: 0 auto;
-    place-content: center;
     grid-template-columns: repeat(2, 1fr);
+  }
+  .container .time-tracking-container {
+    height: 220px;
   }
   .first-section {
     display: grid;
@@ -213,7 +213,6 @@ body {
     grid-row: 1/span 2;
   }
   .first-section .about-person {
-    /*margin-bottom: 1.2rem;*/
     display: flex;
     flex-direction: column;
     align-items: flex-start;
